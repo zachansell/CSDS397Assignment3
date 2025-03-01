@@ -1,0 +1,7 @@
+SELECT years_of_experience, AVG(salary) as average_salary
+INTO salary_to_tenure_analysis
+FROM employee_data
+GROUP BY years_of_experience;
+
+--view the results
+select * from salary_to_tenure_analysis;
