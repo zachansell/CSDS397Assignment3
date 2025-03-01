@@ -1,0 +1,7 @@
+SELECT country, COUNT(emp_id) as num_employees
+INTO employees_per_country_analysis
+FROM employee_data
+GROUP BY country;
+
+--view the results
+select * from employees_per_country_analysis;
