@@ -1,0 +1,7 @@
+SELECT age-age%10 as age_group, AVG(salary) as average_salary
+INTO salary_to_age_group_analysis
+FROM employee_data
+GROUP BY age-age%10;
+
+--view the results
+select * from salary_to_age_group_analysis;
