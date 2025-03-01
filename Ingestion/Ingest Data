@@ -1,0 +1,23 @@
+--creates the table
+CREATE TABLE employee_data (
+    emp_id INT,
+    name VARCHAR(100),
+    age INT,
+    department VARCHAR(100),
+    date_of_joining DATE,
+    years_of_experience INT,
+    country VARCHAR(100),
+    salary DECIMAL(15,2),
+    performance_rating VARCHAR(100)
+);
+
+--loads data from the file into the table
+--NOTE: BULK INSERT only works on Microsoft SQL Server
+BULK INSERT employee_data
+FROM '--insert data file path here--'
+WITH
+(
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n'
+)
