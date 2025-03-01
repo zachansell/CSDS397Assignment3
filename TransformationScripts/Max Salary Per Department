@@ -1,0 +1,7 @@
+SELECT department, MAX(salary) as max_salary
+INTO highest_salary_per_department_analysis
+FROM employee_data
+GROUP BY department;
+
+--view the results
+select * from highest_salary_per_department_analysis;
