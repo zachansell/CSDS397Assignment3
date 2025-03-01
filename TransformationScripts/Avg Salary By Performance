@@ -1,0 +1,7 @@
+Avg Salary by Performance Rating
+SELECT performance_rating, AVG(salary) as average_salary
+INTO performance_by_salary_analysis
+FROM employee_data
+GROUP BY performance_rating;
+
+select * from performance_by_salary_analysis;
