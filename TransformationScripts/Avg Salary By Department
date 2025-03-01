@@ -1,0 +1,7 @@
+SELECT department, AVG(salary) as average_salary
+INTO salary_to_department_analysis
+FROM employee_data
+GROUP BY department;
+
+--view the results
+select * from salary_to_department_analysis;
